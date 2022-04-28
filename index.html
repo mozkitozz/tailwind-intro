@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Stack Tailwind</title>
+    <title>Welcome to Tailwind</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta>
     <style>
       * {
         transition: 0.25s;
+      }
+      img {
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -19,30 +24,34 @@
 
       <div class="float-right">
         <a href="#about" class="hover:opacity-100 opacity-70 text-lg mr-4"
-          >home</a
+          >Docs</a
         >
+        <a href="#contact" class="hover:opacity-100 opacity-70 text-lg mr-4"
+          >Components</a
+        >
+
         <a href="#contact" class="hover:opacity-100 opacity-70 text-lg"
-          >projets</a
-        >
+        >Blog</a
+      >
       </div>
     </nav>
 
     <section class="px-64 mt-32 mb-32">
       <div class="grid grid-cols-2">
         <div>
-          <h1 class="text-5xl font-bold pb-4">ererer</h1>
+          <h1 class="text-5xl font-bold pb-4">Tailwind CSS</h1>
           <p class="pb-4">
             Tailwind CSS works by scanning all of your HTML files, JavaScript
             components, and any other templates for class names, generating the
-            corresponding styles and then writing them to a static CSS file.
+            corresponding styles and then writing them to a static CSS file.<br><br>
             It's fast, flexible, and reliable — with zero-runtime.
           </p>
         </div>
 
         <div>
           <img
-            class="max-w-sm"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+            class="max-w-md"
+            src="tailwind.jpg"
           />
         </div>
       </div>
@@ -50,30 +59,28 @@
 
     <section class="text-center mb-32">
       <div class="max-w-xl inline-block">
-        <h1 class="text-4xl font-bold mb-4">reerer</h1>
+        <h1 class="text-4xl font-bold mb-4">Rapidly build modern websites without ever leaving your HTML.</h1>
 
         <p class="mb-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
-          perspiciatis officia nisi itaque ipsum quidem mollitia, voluptas
-          repudiandae alias nulla cupiditate! Optio sapiente natus aut vel quae
-          laudantium minus odio?
+          A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
         </p>
 
         <div class="grid grid-cols-2 text-center gap-4">
           <div>
-            <h2 class="font-bold text-2xl">Test</h2>
+            <h2 class="font-bold text-2xl">Sizing</h2>
             <p>Description text blabla</p>
           </div>
           <div>
-            <h2 class="font-bold text-2xl">erer</h2>
+            <h2 class="font-bold text-2xl">Colors</h2>
+            
             <p>Description text blabla</p>
           </div>
           <div>
-            <h2 class="font-bold text-2xl">ererr</h2>
+            <h2 class="font-bold text-2xl">Typography</h2>
             <p>Description text blabla</p>
           </div>
           <div>
-            <h2 class="font-bold text-2xl">ererer</h2>
+            <h2 class="font-bold text-2xl"> Shadows</h2>
             <p>Description text blabla</p>
           </div>
         </div>
@@ -100,10 +107,10 @@
     </section>
 
     <footer class="text-center py-8 border-1">
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">test</a>
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">test</a>
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">test</a>
-      <a class="hover:opacity-100 opacity-70" href="#">test</a>
+      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Github</a>
+      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Twitter</a>
+      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Discord</a>
+      <a class="hover:opacity-100 opacity-70" href="#">Youtube</a>
     </footer>
   </body>
 </html>
