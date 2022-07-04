@@ -1,116 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Tailwind</title>
-    <link rel="icon" href="logo.svg" type="image/svg+xml">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta>
-    <style>
-      * {
-        transition: 0.25s;
-      }
-      img {
-        border-radius: 5px;
-      }
-    </style>
-  </head>
+<html class="scroll-smooth lang=" en">
 
-  <body>
-    <nav class="p-4">
-      <a class="font-bold text-2xl" href="/">Full Stack TailwindCSS</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMDb Tailwind</title>
+  <link rel="icon" href="https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta>
+  <style>
+    * {
+      transition: 0.25s;
+    }
 
-      <div class="float-right">
-        <a href="#about" class="hover:opacity-100 opacity-70 text-lg mr-4"
-          >Docs</a
-        >
-        <a href="#contact" class="hover:opacity-100 opacity-70 text-lg mr-4"
-          >Components</a
-        >
+    img {
+      border-radius: 5px;
+    }
+  </style>
+</head>
 
-        <a href="#contact" class="hover:opacity-100 opacity-70 text-lg"
-        >Blog</a
-      >
-      </div>
-    </nav>
+<body class="container w-100 m-auto flex flex-col h-screen">
+  <nav class="flex w-96 m-auto">
+    <a class="p-auto m-auto mr-8"><svg id="home_img" class="ipc-logo" xmlns="http://www.w3.org/2000/svg" width="64"
+        height="32" viewBox="0 0 64 32" version="1.1">
+        <g fill="#F5C518">
+          <rect x="0" y="0" width="100%" height="100%" rx="4"></rect>
+        </g>
+        <g transform="translate(8.000000, 7.000000)" fill="#000000" fill-rule="nonzero">
+          <polygon points="0 18 5 18 5 0 0 0"></polygon>
+          <path
+            d="M15.6725178,0 L14.5534833,8.40846934 L13.8582008,3.83502426 C13.65661,2.37009263 13.4632474,1.09175121 13.278113,0 L7,0 L7,18 L11.2416347,18 L11.2580911,6.11380679 L13.0436094,18 L16.0633571,18 L17.7583653,5.8517865 L17.7707076,18 L22,18 L22,0 L15.6725178,0 Z">
+          </path>
+          <path
+            d="M24,18 L24,0 L31.8045586,0 C33.5693522,0 35,1.41994415 35,3.17660424 L35,14.8233958 C35,16.5777858 33.5716617,18 31.8045586,18 L24,18 Z M29.8322479,3.2395236 C29.6339219,3.13233348 29.2545158,3.08072342 28.7026524,3.08072342 L28.7026524,14.8914865 C29.4312846,14.8914865 29.8796736,14.7604764 30.0478195,14.4865461 C30.2159654,14.2165858 30.3021941,13.486105 30.3021941,12.2871637 L30.3021941,5.3078959 C30.3021941,4.49404499 30.272014,3.97397442 30.2159654,3.74371416 C30.1599168,3.5134539 30.0348852,3.34671372 29.8322479,3.2395236 Z">
+          </path>
+          <path
+            d="M44.4299079,4.50685823 L44.749518,4.50685823 C46.5447098,4.50685823 48,5.91267586 48,7.64486762 L48,14.8619906 C48,16.5950653 46.5451816,18 44.749518,18 L44.4299079,18 C43.3314617,18 42.3602746,17.4736618 41.7718697,16.6682739 L41.4838962,17.7687785 L37,17.7687785 L37,0 L41.7843263,0 L41.7843263,5.78053556 C42.4024982,5.01015739 43.3551514,4.50685823 44.4299079,4.50685823 Z M43.4055679,13.2842155 L43.4055679,9.01907814 C43.4055679,8.31433946 43.3603268,7.85185468 43.2660746,7.63896485 C43.1718224,7.42607505 42.7955881,7.2893916 42.5316822,7.2893916 C42.267776,7.2893916 41.8607934,7.40047379 41.7816216,7.58767002 L41.7816216,9.01907814 L41.7816216,13.4207851 L41.7816216,14.8074788 C41.8721037,15.0130276 42.2602358,15.1274059 42.5316822,15.1274059 C42.8031285,15.1274059 43.1982131,15.0166981 43.281155,14.8074788 C43.3640968,14.5982595 43.4055679,14.0880581 43.4055679,13.2842155 Z">
+          </path>
+        </g>
+      </svg></a>
+    <a href="#intro" class="hover:opacity-100 opacity-70 text-lg mr-8 hover:bg-gray-200 p-4 rounded-md">Intro</a>
+    <a href="#films" class="hover:opacity-100 opacity-70 text-lg mr-8 hover:bg-gray-200 p-4 rounded-md">Films</a>
+    <a href="#" class="hover:opacity-100 opacity-70 text-lg mr-8 hover:bg-gray-200 p-4 rounded-md">Series</a>
+  </nav>
 
-    <section class="px-64 mt-32 mb-32">
-      <div class="grid grid-cols-2">
-        <div>
-          <h1 class="text-5xl font-bold pb-4">Tailwind CSS</h1>
-          <p class="pb-4">
-            Tailwind CSS works by scanning all of your HTML files, JavaScript
-            components, and any other templates for class names, generating the
-            corresponding styles and then writing them to a static CSS file.<br><br>
-            It's fast, flexible, and reliable — with zero-runtime.
-          </p>
-        </div>
-
-        <div>
-          <img
-            class="max-w-md"
-            src="tailwind.jpg"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="text-center mb-32">
-      <div class="max-w-xl inline-block">
-        <h1 class="text-4xl font-bold mb-4">Rapidly build modern websites without ever leaving your HTML.</h1>
-
-        <p class="mb-4">
-          A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
-        </p>
-
-        <div class="grid grid-cols-2 text-center gap-4">
-          <div>
-            <h2 class="font-bold text-2xl">Sizing</h2>
-            <p>Description text blabla</p>
-          </div>
-          <div>
-            <h2 class="font-bold text-2xl">Colors</h2>
-            
-            <p>Description text blabla</p>
-          </div>
-          <div>
-            <h2 class="font-bold text-2xl">Typography</h2>
-            <p>Description text blabla</p>
-          </div>
-          <div>
-            <h2 class="font-bold text-2xl"> Shadows</h2>
-            <p>Description text blabla</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="px-64 mb-32">
-      <div>
-        <h1 class="text-5xl font-bold pb-4">fjjzfe</h1>
-        <p class="pb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-          accusantium unde illum hic tenetur recusandae quos quae ad eius
-          repellendus minima cumque ea, error optio dolorem dolore ducimus alias
-          officia.
+  <section id="intro" class="m-10 mt-20 mb-20 bg-[url('./fond')] bg-black">
+    <div class="text-center">
+      <div class="text-black bg-white">
+        <h1 class="text-5xl font-bold pt-4">What is IMDb ?</h1>
+        <p class="p-10">
+          IMDb (an abbreviation of Internet Movie Database) is an online database of information related to films,
+          television series, home videos, video games, and streaming content online – including cast, production crew
+          and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. IMDb began as a
+          fan-operated movie database on the Usenet group "rec.arts.movies" in 1990, and moved to the Web in 1993. It is
+          now owned and operated by IMDb.com, Inc., a subsidiary of Amazon.
         </p>
       </div>
-    </section>
+    </div>
+    <div>
+      <img class="m-auto w-1/2" src="fond.jpg" />
+    </div>
+  </section>
 
-    <section id="contact" class="px-64 mb-32">
-      <div>
-        <h1 class="text-5xl font-bold pb-4">fjjzfe</h1>
-        <p class="pb-4">erererer,</p>
+  <section id="films" class="flex flex-wrap flex justify-center space-x-8 text-center mb-32 border-1 border-green-4 pt-4">
+    <div class="float-left">
+      <h1 class="text-4xl font-bold mb-4 font-serif">Discover of IMDb</h1>
+      <div class=" text-center space-y-12">
+        <div>
+          <h2 class="text-xl italic ">Movies that will change your life + mindset</h2>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+              src="interstellar.jpeg" alt="">
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Interstellar</h5>
+              <p class="text-gray-700 text-base mb-4">A team of explorers travel through a wormhole
+                in space in an attempt to ensure humanity's survival.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src="intothewild.jpeg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Into the Wild</h5>
+              <p class="text-gray-700 text-base mb-4">
+                After graduating from Emory University, top student and athlete Christopher McCandless abandons his
+                possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the
+                wilderness. Along the way, Christopher encounters a series of characters that shape his life.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src="inception.jpeg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Inception</h5>
+              <p class="text-gray-700 text-base mb-4">
+                A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse
+                task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his
+                team to disaster.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+              src="thepoursuit.jpeg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">The Pursuit of Happyness</h5>
+              <p class="text-gray-700 text-base mb-4">
+                A struggling salesman takes custody of his son as he's poised to begin a life-changing professional
+                career.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="float-right">
+      <h1 class="text-4xl font-bold mb-4 font-serif">Top of IMDb</h1>
+      <div class="text-center space-y-12">
+        <div>
+          <h2 class="text-xl italic">Tarantino's Realisations</h2>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+              src="onceupon.jpeg" alt="">
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Once Upon a Time... In
+                Hollywood</h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">A faded television actor and his stunt double
+                strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src="pulpfiction.jpeg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Pulp Fiction</h5>
+              <p class="text-gray-700 text-base mb-4">
+                The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in
+                four tales of violence and redemption.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src="django.jpg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Django Unchained</h5>
+              <p class="text-gray-700 text-base mb-4">
+                With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal
+                plantation-owner in Mississippi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+              src="inglorious.jpg" alt="" />
+            <div class="p-6 flex flex-col justify-start">
+              <h5 class="text-gray-900 text-xl font-medium mb-2">Inglourious Basterds</h5>
+              <p class="text-gray-700 text-base mb-4">
+                In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish
+                U.S. soldiers coincides with a theatre owner's vengeful plans for the same.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="text-center py-8 border-1">
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Github</a>
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Twitter</a>
-      <a class="hover:opacity-100 opacity-70 mr-4" href="#">Discord</a>
-      <a class="hover:opacity-100 opacity-70" href="#">Youtube</a>
-    </footer>
-  </body>
+
+
+  <footer class="text-center bg-gray-900 text-white">
+    <div class="container px-6 pt-6">
+      <div class="flex justify-center mb-6">
+        <a href="#!" type="button"
+          class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 m-4">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="w-2 h-full mx-auto"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path fill="currentColor"
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#!" type="button"
+          class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 m-4">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="w-3 h-full mx-auto"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#!" type="button"
+          class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 m-4">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="w-3 h-full mx-auto"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+            <path fill="currentColor"
+              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="https://instagram.com/imdb" type="button"
+          class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 m-4">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="w-3 h-full mx-auto"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#!" type="button"
+          class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 m-4">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="w-3 h-full mx-auto"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+            </path>
+          </svg>
+        </a>
+
+
+      </div>
+    </div>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 1990-2022 by IMDb.com, Inc.
+    </div>
+  </footer>
+</body>
+
 </html>
